@@ -40,26 +40,32 @@
         0% {
             transform: scale(0);
             opacity: 0;
+            bottom: 100%;
         }
 
         25% {
             transform: scale(0.25);
             opacity: 0.25;
+            bottom: 75%;
         }
 
         50% {
+            position:absolute;
             transform: scale(0.50);
             opacity: 0.50;
+            bottom: 50%;
         }
 
         75% {
-            transform: scale(0.75);
-            opacity: 0.75;
+            transform: scale(1);
+            opacity: 1;
+            bottom: 25%;
         }
 
         100% {
             transform: scale(1);
             opacity: 1;
+            bottom: 25%;
         }
     }
 </style>
