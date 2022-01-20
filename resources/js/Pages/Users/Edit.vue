@@ -31,6 +31,7 @@
 
 <script>
     import Layout from '@/Shared/Layout'
+    import VideoBg from 'vue-videobg'
     export default {
         props: [
             "errors", 'user'
@@ -38,6 +39,7 @@
             
         components: {
                 Layout,
+                'video-bg': VideoBg
         },
         data() {
             return {
