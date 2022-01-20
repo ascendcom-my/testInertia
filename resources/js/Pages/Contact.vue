@@ -2,7 +2,6 @@
     <layout>
         <div id="bg-video" class="w-full h-full bg-contain bg-no-repeat bg-center bg-neutral-800">
             <div id="model" class="absolute right-1/2 flex flex-col items-center w-40">
-                
                 <div id="personImg" class="w-20"></div>
                 <div id="cardNameImg" class="w-full h-6"></div>
                 
@@ -33,10 +32,22 @@
     }
 
     #model{
-        animation: flow 10s linear;
+        opacity: 0;
+        bottom: 80%;
+        scale: 0;
+        transition: bottom 10s, opacity 10s, transform 10s;
+
+        /* animation: flow 10s linear; */
     }
 
-    @keyframes flow {
+    #model.active {
+        transform: scale(1.5);
+        opacity: 2;
+        bottom: 25%;
+        /* bottom: 500px; */
+    }
+
+    /* @keyframes flow {
         0% {
             transform: scale(0);
             opacity: 0;
@@ -50,7 +61,6 @@
         }
 
         50% {
-            position:absolute;
             transform: scale(0.50);
             opacity: 0.50;
             bottom: 50%;
@@ -67,10 +77,11 @@
             opacity: 1;
             bottom: 25%;
         }
-    }
+    } */
 </style>
 
 <script>
+    
     import Layout from '@/Shared/Layout'
     export default {
         props: ['foo'],
@@ -78,5 +89,10 @@
                 Layout
             },
         }
+        $(document).ready(function() {
+            $("#model").addClass("active");
+        });
+
+
 </script>
 
