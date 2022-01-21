@@ -9,7 +9,6 @@
         <div class="navbar-nav">
           <inertia-link href="/" class="nav-item nav-link">Home</inertia-link>
           <inertia-link href="/users"  class="nav-item nav-link">Index</inertia-link>
-          <inertia-link href="/contact"  class="nav-item nav-link">Contact</inertia-link>
         </div>
       </div>
     </nav>
